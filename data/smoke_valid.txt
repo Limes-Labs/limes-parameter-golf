@@ -1,0 +1,1 @@
+Compact models should compress validation bytes reproducibly.
