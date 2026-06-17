@@ -1,0 +1,3 @@
+Limes Parameter Golf rewards compact language models.
+Efficient models should compress bytes well, run locally, and document every trick.
+Small baselines make the scoring path easy to test.
