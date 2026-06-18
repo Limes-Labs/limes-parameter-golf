@@ -37,8 +37,12 @@ Use `scripts/account_efficiency.py` to produce a machine-readable budget report:
 ```bash
 python3 scripts/account_efficiency.py \
   --costs templates/accounting-costs.example.json \
-  --limits templates/accounting-limits.example.json
+  --limits templates/accounting-limits.example.json \
+  --enforce
 ```
+
+`--enforce` exits with code 2 if any declared hard limit is exceeded. Use it in
+CI or smoke scripts when an over-budget result should fail the run.
 
 ## No-Cheating Protocol
 

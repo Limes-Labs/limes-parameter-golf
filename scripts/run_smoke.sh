@@ -53,6 +53,7 @@ JSON
 
 python3 "$ROOT_DIR/scripts/account_efficiency.py" \
   --costs "$WORK_DIR/costs.json" \
-  --limits "$WORK_DIR/limits.json"
+  --limits "$WORK_DIR/limits.json" \
+  --enforce
 
 python3 -m unittest discover -s "$ROOT_DIR/tests"
