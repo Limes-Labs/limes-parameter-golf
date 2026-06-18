@@ -58,7 +58,8 @@ Run efficiency accounting for a research-track experiment:
 ```bash
 python3 scripts/account_efficiency.py \
   --costs templates/accounting-costs.example.json \
-  --limits templates/accounting-limits.example.json
+  --limits templates/accounting-limits.example.json \
+  --enforce
 ```
 
 ## Repository Map

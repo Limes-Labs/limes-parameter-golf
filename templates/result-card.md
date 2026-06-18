@@ -49,5 +49,5 @@ method loses to a simpler baseline.
 # scoring
 
 # accounting
-python3 scripts/account_efficiency.py --costs <costs.json> --limits <limits.json>
+python3 scripts/account_efficiency.py --costs <costs.json> --limits <limits.json> --enforce
 ```

@@ -7,7 +7,7 @@
   "artifact_size_bytes": 4096,
   "training_command": "python3 train.py --seed 1",
   "evaluation_command": "python3 eval.py --artifact artifact/",
-  "accounting_command": "python3 scripts/account_efficiency.py --costs costs.json --limits limits.json",
+  "accounting_command": "python3 scripts/account_efficiency.py --costs costs.json --limits limits.json --enforce",
   "hardware": "local CPU",
   "training_time_seconds": 3.0,
   "update_steps": 20,

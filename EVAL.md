@@ -69,5 +69,6 @@ python3 scripts/check_artifact_size.py artifact.json --limit-mib 16
 ```bash
 python3 scripts/account_efficiency.py \
   --costs templates/accounting-costs.example.json \
-  --limits templates/accounting-limits.example.json
+  --limits templates/accounting-limits.example.json \
+  --enforce
 ```
