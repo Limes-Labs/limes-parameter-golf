@@ -1,0 +1,9 @@
+{
+  "limits": {
+    "artifact_size_bytes": 16777216,
+    "training_time_seconds": 600.0,
+    "update_steps": 1000,
+    "peak_memory_bytes": 1073741824,
+    "scoring_time_seconds": 60.0
+  }
+}

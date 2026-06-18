@@ -33,6 +33,19 @@ This track is intentionally reminiscent of the OpenAI Parameter Golf constraint,
 - Leaderboard status: non-record unless it also satisfies a record track.
 - Purpose: document interesting ideas without forcing every experiment into the strict official limits.
 
+### Efficiency Research Track
+
+- Artifact limit: declared before the run; record-like claims should include a hard limit.
+- Training budget: declared wall-clock budget plus the hardware target.
+- Update budget: declared optimizer steps or equivalent update events.
+- Memory budget: declared peak training or scoring memory.
+- Scoring budget: declared validation wall-clock time and test-time compute policy.
+- Selection budget: declared number of sweeps, reruns, hand-tuned variants, or automated search trials.
+- Leaderboard status: research result unless it also satisfies a record track.
+- Purpose: test efficiency hypotheses honestly under hard limits, including negative and mixed results.
+
+Research-track claims must charge optimizer state, teacher or selector state, score-first adaptation, and any search process used to choose the final artifact. Use `scripts/account_efficiency.py` and `templates/result-card.md` when reporting results.
+
 ## Artifact Definition
 
 The artifact includes everything needed at inference time: weights, tokenizer files, lookup tables, generated code, compressed archives, metadata used by the model, and any calibration data. Evaluation harness code supplied by this repository is not counted.
@@ -59,6 +72,7 @@ Submissions must include:
 - Using non-deterministic external APIs during scoring.
 - Omitting files needed to reproduce the artifact.
 - Misrepresenting affiliation with OpenAI or Limes Labs.
+- Hiding optimizer, selector, teacher, sweep, or score-probing costs behind a submitted artifact.
 
 ## Governance Notes
 

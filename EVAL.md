@@ -22,6 +22,9 @@ It also accepts baseline outputs written by the included byte-unigram baseline:
 python3 scripts/score_bpb.py --baseline-output result.json
 ```
 
+The byte-bigram baseline writes the same output shape, so it can be scored with
+the same command.
+
 ## Tokenizer-Agnostic Policy
 
 Models may use any tokenizer or byte-level representation, but scoring is normalized by the number of original validation bytes. If a tokenizer transforms text, the submission must prove the transform is lossless for the evaluated byte stream or account for any side information inside the artifact.
@@ -59,4 +62,12 @@ Parameter-limited contests can overfit through repeated leaderboard probing, val
 
 ```bash
 python3 scripts/check_artifact_size.py artifact.json --limit-mib 16
+```
+
+`scripts/account_efficiency.py` reports costs and hard-limit status for research-track experiments:
+
+```bash
+python3 scripts/account_efficiency.py \
+  --costs templates/accounting-costs.example.json \
+  --limits templates/accounting-limits.example.json
 ```
