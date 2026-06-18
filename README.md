@@ -43,6 +43,24 @@ python3 scripts/score_bpb.py --baseline-output /tmp/limes-byte-unigram-output.js
 python3 scripts/check_artifact_size.py /tmp/limes-byte-unigram.json --limit-mib 16
 ```
 
+Run the stronger local baseline:
+
+```bash
+python3 baselines/byte_bigram_baseline.py \
+  --train data/smoke_train.txt \
+  --valid data/smoke_valid.txt \
+  --artifact /tmp/limes-byte-bigram.json \
+  --output /tmp/limes-byte-bigram-output.json
+```
+
+Run efficiency accounting for a research-track experiment:
+
+```bash
+python3 scripts/account_efficiency.py \
+  --costs templates/accounting-costs.example.json \
+  --limits templates/accounting-limits.example.json
+```
+
 ## Repository Map
 
 - `RULES.md`: challenge tracks, limits, and conduct expectations
@@ -50,9 +68,11 @@ python3 scripts/check_artifact_size.py /tmp/limes-byte-unigram.json --limit-mib 
 - `SUBMISSIONS.md`: artifact and reproducibility format
 - `baselines/`: simple local baselines
 - `scripts/`: scoring, artifact checks, and smoke test
+- `docs/research-track.md`: efficiency research protocol, accounting, and promotion gates
+- `templates/`: submission, result-card, and accounting examples
 - `tests/`: unit tests for scoring and size enforcement
 - `docs/design-notes.md`: design lessons from Parameter Golf-style challenges
 
 ## Status
 
-This is an initial scaffold. The public leaderboard, canonical validation split hashes, and submission review process still need to be finalized before accepting official entries.
+This is an initial scaffold. The public leaderboard, canonical validation split hashes, and submission review process still need to be finalized before accepting official entries. The research track is open for protocol and harness development before official leaderboard launch.

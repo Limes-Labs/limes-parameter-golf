@@ -1,0 +1,29 @@
+{
+  "name": "example-efficiency-experiment",
+  "track": "research-efficiency",
+  "status": "candidate",
+  "commit": "<git-sha>",
+  "artifact_sha256": "<sha256>",
+  "artifact_size_bytes": 4096,
+  "training_command": "python3 train.py --seed 1",
+  "evaluation_command": "python3 eval.py --artifact artifact/",
+  "accounting_command": "python3 scripts/account_efficiency.py --costs costs.json --limits limits.json",
+  "hardware": "local CPU",
+  "training_time_seconds": 3.0,
+  "update_steps": 20,
+  "optimizer_state_bytes": 8192,
+  "peak_memory_bytes": 65536,
+  "scoring_time_seconds": 1.0,
+  "selection_trials": 1,
+  "selection_time_seconds": 0.0,
+  "bpb": 0.0,
+  "baseline_bpb": 0.0,
+  "seeds": [1],
+  "dependencies": {
+    "python": "3.10+"
+  },
+  "method_summary": "Short description of the efficiency hypothesis.",
+  "failure_modes": [
+    "Describe at least one expected or observed failure mode."
+  ]
+}
